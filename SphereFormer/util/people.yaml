@@ -1,0 +1,35 @@
+# This file is covered by the LICENSE file in the root of this project.
+# This file is covered by the LICENSE file in the root of this project.
+labels: 
+  0 : "unlabeled"
+  1 : "car"
+color_map: # bgr
+  0 : [0, 255, 0]
+  1 : [0, 0, 255]
+#content: # as a ratio with the total number of points
+ # 0: 0.18889854628292943
+ # 1: 0.0002937197336781505
+# classes that are indistinguishable from single scan or inconsistent in
+# ground truth are mapped to their closest equivalent
+learning_map:
+  0 : 0     # "unlabeled"
+  1 : 1
+learning_map_inv: # inverse of previous map
+  0: 0      # "unlabeled", and others ignored
+  1: 1
+learning_ignore: # Ignore classes
+  0: False      # "unlabeled", and others ignored
+  1: False     # "car"
+split: # sequence numbers
+  train:
+    - 1
+    - 2
+    - 3
+    - 4
+
+  valid:
+    - 5
+    - 6
+
+  test:
+    - 7
